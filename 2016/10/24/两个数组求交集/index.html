@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="1234567NSArray *arrayA = @&amp;#123;@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;&amp;#125;;NSArray *arrayB = @&amp;#123;@&quot;15&quot;, @&quot;2&quot;, @&quot;3&quot;, @&quot;18&quot;, @&quot;1&quot;, @&quot;43&quot;&amp;#125;;self.slider.value = 50;- (IBAction)buttonTapped:(UIButton *)bu">
+<meta name="description" content="#最快速求出两个数组的交集和并集，时间复杂度是O(n)，前提数组中无重复元素
+1234567891011121314151617181920212223// 初始化数组A且无重复元素NSMutableArray *arrayA = [@[@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;] mutableCopy];// 初始化数组B且无重复元素NSMutableArray *array">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两个数组求交集">
+<meta property="og:title" content="两个数组求交集和并集">
 <meta property="og:url" content="http://yoursite.com/2016/10/24/两个数组求交集/index.html">
 <meta property="og:site_name" content="痞子Boy">
-<meta property="og:description" content="1234567NSArray *arrayA = @&amp;#123;@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;&amp;#125;;NSArray *arrayB = @&amp;#123;@&quot;15&quot;, @&quot;2&quot;, @&quot;3&quot;, @&quot;18&quot;, @&quot;1&quot;, @&quot;43&quot;&amp;#125;;self.slider.value = 50;- (IBAction)buttonTapped:(UIButton *)bu">
-<meta property="og:updated_time" content="2016-10-27T06:25:03.000Z">
+<meta property="og:description" content="#最快速求出两个数组的交集和并集，时间复杂度是O(n)，前提数组中无重复元素
+1234567891011121314151617181920212223// 初始化数组A且无重复元素NSMutableArray *arrayA = [@[@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;] mutableCopy];// 初始化数组B且无重复元素NSMutableArray *array">
+<meta property="og:updated_time" content="2016-11-01T09:14:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两个数组求交集">
-<meta name="twitter:description" content="1234567NSArray *arrayA = @&amp;#123;@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;&amp;#125;;NSArray *arrayB = @&amp;#123;@&quot;15&quot;, @&quot;2&quot;, @&quot;3&quot;, @&quot;18&quot;, @&quot;1&quot;, @&quot;43&quot;&amp;#125;;self.slider.value = 50;- (IBAction)buttonTapped:(UIButton *)bu">
+<meta name="twitter:title" content="两个数组求交集和并集">
+<meta name="twitter:description" content="#最快速求出两个数组的交集和并集，时间复杂度是O(n)，前提数组中无重复元素
+1234567891011121314151617181920212223// 初始化数组A且无重复元素NSMutableArray *arrayA = [@[@&quot;5&quot;, @&quot;2&quot;, @&quot;43&quot;, @&quot;8&quot;, @&quot;61&quot;] mutableCopy];// 初始化数组B且无重复元素NSMutableArray *array">
 
 
 
@@ -117,7 +120,7 @@
   <link rel="canonical" href="http://yoursite.com/2016/10/24/两个数组求交集/"/>
 
 
-  <title> 两个数组求交集 | 痞子Boy </title>
+  <title> 两个数组求交集和并集 | 痞子Boy </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +242,7 @@
             
             
               
-                两个数组求交集
+                两个数组求交集和并集
               
             
           </h1>
@@ -286,16 +289,10 @@
       
 
       
-        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSArray</span> *arrayA = @&#123;<span class="string">@"5"</span>, <span class="string">@"2"</span>, <span class="string">@"43"</span>, <span class="string">@"8"</span>, <span class="string">@"61"</span>&#125;;</div><div class="line"></div><div class="line"><span class="built_in">NSArray</span> *arrayB = @&#123;<span class="string">@"15"</span>, <span class="string">@"2"</span>, <span class="string">@"3"</span>, <span class="string">@"18"</span>, <span class="string">@"1"</span>, <span class="string">@"43"</span>&#125;;</div><div class="line"></div><div class="line"><span class="keyword">self</span>.slider.value = <span class="number">50</span>;</div><div class="line"></div><div class="line">- (<span class="keyword">IBAction</span>)buttonTapped:(<span class="built_in">UIButton</span> *)button;</div></pre></td></tr></table></figure>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>#最快速求出两个数组的交集和并集，时间复杂度是O(n)，前提数组中无重复元素</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 初始化数组A且无重复元素</span></div><div class="line"><span class="built_in">NSMutableArray</span> *arrayA = [@[<span class="string">@"5"</span>, <span class="string">@"2"</span>, <span class="string">@"43"</span>, <span class="string">@"8"</span>, <span class="string">@"61"</span>] mutableCopy];</div><div class="line"><span class="comment">// 初始化数组B且无重复元素</span></div><div class="line"><span class="built_in">NSMutableArray</span> *arrayB = [@[<span class="string">@"15"</span>, <span class="string">@"2"</span>, <span class="string">@"3"</span>, <span class="string">@"18"</span>, <span class="string">@"97"</span>, <span class="string">@"43"</span>] mutableCopy];</div><div class="line"><span class="comment">// 初始化可变字典</span></div><div class="line"><span class="built_in">NSMutableDictionary</span> *dic = [<span class="built_in">NSMutableDictionary</span> dictionary];</div><div class="line"></div><div class="line"><span class="comment">// 遍历数组A,数组中的元素当作字典的key和value,生成一一映射的key-value字典模型</span></div><div class="line"><span class="keyword">for</span> (<span class="built_in">NSString</span> *str <span class="keyword">in</span> arrayA) &#123;</div><div class="line">	dic[str] = str;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 遍历数组B,把数组B中的元素当作key,判断dic[str]的值是否为空</span></div><div class="line"><span class="keyword">for</span> (<span class="built_in">NSString</span> *str <span class="keyword">in</span> arrayB) &#123;</div><div class="line">	<span class="keyword">if</span> (dic[str]) &#123;</div><div class="line">	   <span class="built_in">NSLog</span>(<span class="string">@"交集是 %@"</span>, str); <span class="comment">// 2, 43</span></div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="comment">// 新的数组A就是原来A和B的并集</span></div><div class="line">	   [arrayA addObject:str];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"并集是 %@"</span>, arrayA); <span class="comment">// 5, 2, 43, 8, 61, 15, 3, 18, 97</span></div></pre></td></tr></table></figure>
+<p>##此方法可以这么理解：<br>假设有100个空座位，分别被1-100序号标记了。数组A和B中的元素假设是学生且是学生本人的序号（元素值就是学生本人的序号）。第一次遍历数组A时，学生根据自己的序号找到相对应的座位坐下，此时相应的座位已坐下对应序号的学生；第二次遍历数组B时，数组B中的学生再根据自己的序号找相对应的座位，若该座位已经有学生占用了，那么该座位的序号就是交集。</p>
+<p>##若数组中的元素是浮点数如3.23、字符如@”a”等，该方法同样适用，本人已经验证过</p>
 
       
     </div>
@@ -354,7 +351,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/10/24/两个数组求交集/"
-           data-title="两个数组求交集" data-url="http://yoursite.com/2016/10/24/两个数组求交集/">
+           data-title="两个数组求交集和并集" data-url="http://yoursite.com/2016/10/24/两个数组求交集/">
       </div>
     
   </div>
@@ -438,7 +435,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

@@ -84,16 +84,31 @@
 
 
 
-<meta name="description" content="使用new和alloc/init的区别">
+<meta name="description" content="示例1
+12345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
+
+
+
+12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每日技术整理">
-<meta property="og:url" content="http://yoursite.com/2016/10/27/每日技术整理/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/static静态变量/index.html">
 <meta property="og:site_name" content="痞子Boy">
-<meta property="og:description" content="使用new和alloc/init的区别">
-<meta property="og:updated_time" content="2016-10-27T08:35:54.000Z">
+<meta property="og:description" content="示例1
+12345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
+
+
+
+12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;">
+<meta property="og:updated_time" content="2016-11-02T09:40:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每日技术整理">
-<meta name="twitter:description" content="使用new和alloc/init的区别">
+<meta name="twitter:description" content="示例1
+12345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
+
+
+
+12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;">
 
 
 
@@ -114,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/27/每日技术整理/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/27/static静态变量/"/>
 
 
   <title> 每日技术整理 | 痞子Boy </title>
@@ -262,8 +277,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/27/每日技术整理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/27/每日技术整理/" itemprop="commentsCount"></span>
+                <a href="/2016/10/27/static静态变量/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/27/static静态变量/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -286,7 +301,13 @@
       
 
       
-        <h1 id="使用new和alloc-init的区别"><a href="#使用new和alloc-init的区别" class="headerlink" title="使用new和alloc/init的区别"></a>使用new和alloc/init的区别</h1>
+        <h1 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h1><ul>
+<li><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="keyword">count</span>() &#123;</div><div class="line">	<span class="comment">// static 修饰变量，仅初始化一次</span></div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	a++;</div><div class="line">	printf(<span class="string">"a = %d"</span>, a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 2</span></div></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="keyword">count</span>() &#123;</div><div class="line">	<span class="comment">// 没有static修饰</span></div><div class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	a++;</div><div class="line">	printf(<span class="string">"a = %d"</span>, a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -349,8 +370,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/27/每日技术整理/"
-           data-title="每日技术整理" data-url="http://yoursite.com/2016/10/27/每日技术整理/">
+      <div class="ds-thread" data-thread-key="2016/10/27/static静态变量/"
+           data-title="每日技术整理" data-url="http://yoursite.com/2016/10/27/static静态变量/">
       </div>
     
   </div>
@@ -434,7 +455,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用new和alloc-init的区别"><span class="nav-number">1.</span> <span class="nav-text">使用new和alloc/init的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#示例1"><span class="nav-number">1.</span> <span class="nav-text">示例1</span></a></li></ol></div>
             
           </div>
         </section>

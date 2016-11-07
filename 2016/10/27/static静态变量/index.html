@@ -5,20 +5,23 @@
   
   <title>static静态变量 | Feng&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="示例112345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
-12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;	a++;">
+  <meta name="description" content="静态变量(Static Variable)在计算机编程领域指在程序执行前系统就为之静态分配（即在运行时中不再改变分配情况）存储空间的一类变量。与之相对应的是在运行时只暂时存在的自动变量（即局部变量）与以动态分配方式获取存储空间的一些对象，其中自动变量的存储空间在调用栈上分配与释放。——维基百科(Wikipedia)
+
+C示例12345678910111213void func() &amp;#123;	/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="static静态变量">
 <meta property="og:url" content="http://yoursite.com/2016/10/27/static静态变量/index.html">
 <meta property="og:site_name" content="Feng's Blog">
-<meta property="og:description" content="示例112345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
-12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;	a++;">
+<meta property="og:description" content="静态变量(Static Variable)在计算机编程领域指在程序执行前系统就为之静态分配（即在运行时中不再改变分配情况）存储空间的一类变量。与之相对应的是在运行时只暂时存在的自动变量（即局部变量）与以动态分配方式获取存储空间的一些对象，其中自动变量的存储空间在调用栈上分配与释放。——维基百科(Wikipedia)
+
+C示例12345678910111213void func() &amp;#123;	/">
 <meta property="og:image" content="http://yoursite.com/img/static静态变量.png">
-<meta property="og:updated_time" content="2016-11-03T01:34:35.000Z">
+<meta property="og:updated_time" content="2016-11-07T03:36:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="static静态变量">
-<meta name="twitter:description" content="示例112345678910void count() &amp;#123;	// static 修饰变量，仅初始化一次	static int a = 0;	a++;	printf(&quot;a = %d&quot;, a);&amp;#125;count(); // a = 1count(); // a = 2
-12345678910void count() &amp;#123;	// 没有static修饰	int a = 0;	a++;">
+<meta name="twitter:description" content="静态变量(Static Variable)在计算机编程领域指在程序执行前系统就为之静态分配（即在运行时中不再改变分配情况）存储空间的一类变量。与之相对应的是在运行时只暂时存在的自动变量（即局部变量）与以动态分配方式获取存储空间的一些对象，其中自动变量的存储空间在调用栈上分配与释放。——维基百科(Wikipedia)
+
+C示例12345678910111213void func() &amp;#123;	/">
 <meta name="twitter:image" content="http://yoursite.com/img/static静态变量.png">
   
   
@@ -59,7 +62,7 @@
       </nav>
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -90,8 +93,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h1><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="keyword">count</span>() &#123;</div><div class="line">	<span class="comment">// static 修饰变量，仅初始化一次</span></div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	a++;</div><div class="line">	printf(<span class="string">"a = %d"</span>, a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 2</span></div></pre></td></tr></table></figure>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="keyword">count</span>() &#123;</div><div class="line">	<span class="comment">// 没有static修饰</span></div><div class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	a++;</div><div class="line">	printf(<span class="string">"a = %d"</span>, a);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div><div class="line"></div><div class="line"><span class="keyword">count</span>(); <span class="comment">// a = 1</span></div></pre></td></tr></table></figure>
+        <p><strong>静态变量(Static Variable)</strong>在<font color="orange">计算机编程</font>领域指在程序执行前系统就为之<font color="orange">静态分配</font>（即在运行时中不再改变分配情况）存储空间的一类<font color="orange">变量</font>。与之相对应的是在运行时只暂时存在的<font color="orange">自动变量</font>（即局部变量）与以<font color="orange">动态分配</font>方式获取存储空间的一些对象，其中自动变量的存储空间在<font color="orange">调用栈</font>上分配与释放。——维基百科(Wikipedia)</p>
+<hr>
+<h1 id="C示例"><a href="#C示例" class="headerlink" title="C示例"></a>C示例</h1><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="keyword">func</span><span class="params">()</span> &#123;</span></div><div class="line">	// 在对<span class="function"><span class="keyword">func</span>的三次调用中，<span class="title">x</span>只进行一次初始化</span></div><div class="line">	<span class="keyword">static</span> <span class="built_in">int</span> x = <span class="number">0</span><span class="comment">;</span></div><div class="line">	// 输出x的值</div><div class="line">	printf(<span class="string">"%d\n"</span>, x)<span class="comment">;</span></div><div class="line">	x = x + <span class="number">1</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc, char *<span class="keyword">const</span> argv[]) &#123;</div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出1</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="keyword">func</span><span class="params">()</span> &#123;</span></div><div class="line">	// 没有<span class="keyword">static</span>修饰</div><div class="line">	<span class="built_in">int</span> x = <span class="number">0</span><span class="comment">;</span></div><div class="line">	printf(<span class="string">"%d"</span>, x)<span class="comment">;</span></div><div class="line">	x = x + <span class="number">1</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc, char *<span class="keyword">const</span> argv[]) &#123;</div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
 <p>同名的static 变量，那么方法体里面的实例变量和全局的static变量不会冲突，在方法体内部访问的static变量和全局的static变量是不同的。</p>
 <p><img src="/img/static静态变量.png" alt=""></p>
 <p>以上两个static变量是两个不同的变量</p>
@@ -99,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/27/static静态变量/" data-id="civ26l1030000t2i0cpx2d8et" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/10/27/static静态变量/" data-id="civ7inq880000ydi0x4i85jdc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -112,7 +118,7 @@
   
   
     <a href="/2016/10/24/两个数组求交集/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">两个数组求交集和并集</div>
     </a>
   
@@ -149,7 +155,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
@@ -159,7 +165,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
     </div>
@@ -178,7 +184,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -203,7 +209,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 hongfeng<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

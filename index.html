@@ -88,14 +88,14 @@
 <h1 id="C示例"><a href="#C示例" class="headerlink" title="C示例"></a>C示例</h1><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="keyword">func</span><span class="params">()</span> &#123;</span></div><div class="line">	// 在对<span class="function"><span class="keyword">func</span>的三次调用中，<span class="title">x</span>只进行一次初始化</span></div><div class="line">	<span class="keyword">static</span> <span class="built_in">int</span> x = <span class="number">0</span><span class="comment">;</span></div><div class="line">	// 输出x的值</div><div class="line">	printf(<span class="string">"%d\n"</span>, x)<span class="comment">;</span></div><div class="line">	x = x + <span class="number">1</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc, char *<span class="keyword">const</span> argv[]) &#123;</div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出1</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="keyword">func</span><span class="params">()</span> &#123;</span></div><div class="line">	// 没有<span class="keyword">static</span>修饰</div><div class="line">	<span class="built_in">int</span> x = <span class="number">0</span><span class="comment">;</span></div><div class="line">	printf(<span class="string">"%d"</span>, x)<span class="comment">;</span></div><div class="line">	x = x + <span class="number">1</span><span class="comment">;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc, char *<span class="keyword">const</span> argv[]) &#123;</div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span>; // 输出0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p>同名的static 变量，那么方法体里面的实例变量和全局的static变量不会冲突，在方法体内部访问的static变量和全局的static变量是不同的。</p>
+<h1 id="Objective-C示例"><a href="#Objective-C示例" class="headerlink" title="Objective-C示例"></a>Objective-C示例</h1><p>同名的static 变量，那么方法体里面的实例变量和全局的static变量不会冲突，在方法体内部访问的static变量和全局的static变量是不同的。</p>
 <p><img src="/img/static静态变量.png" alt=""></p>
 <p>以上两个static变量是两个不同的变量</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/27/static静态变量/" data-id="civ7inq880000ydi0x4i85jdc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/27/static静态变量/" data-id="civ7j37rq000015i040zcw0v9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -139,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/24/两个数组求交集/" data-id="civ7inq8e0001ydi0p3l2n2tr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/24/两个数组求交集/" data-id="civ7j37ru000115i0qouskusx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
